@@ -13,4 +13,3 @@ terraform.tfstate.backup
 lambda_package
 lambda_function.zip
 lambda-out.txt
-/workspaces/aws-container-CSD126/resources/user_data.sh
