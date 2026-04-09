@@ -4,13 +4,13 @@ resource "aws_cognito_user_pool_client" "xpix" {
   allowed_oauth_flows_user_pool_client          = true
   allowed_oauth_scopes                          = ["email", "openid", "phone"]
   auth_session_validity                         = 3
-  callback_urls                                 = ["https://d84l1y8p4kdic.cloudfront.net"]
+  callback_urls                                 = ["http://localhost:5000", "http://localhost:5000/authorize", "https://d84l1y8p4kdic.cloudfront.net"]
   enable_propagate_additional_user_context_data = false
   enable_token_revocation                       = true
-  explicit_auth_flows                           = ["ALLOW_REFRESH_TOKEN_AUTH", "ALLOW_USER_AUTH", "ALLOW_USER_SRP_AUTH"]
+  explicit_auth_flows                           = []
   generate_secret                               = null
   id_token_validity                             = 60
-  logout_urls                                   = []
+  logout_urls                                   = ["http://localhost:5000"]
   name                                          = "xpix-client"
   prevent_user_existence_errors                 = "ENABLED"
   read_attributes                               = []

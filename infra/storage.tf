@@ -55,8 +55,18 @@ resource "aws_ssm_parameter" "photos_bucket_name" {
   value = aws_s3_bucket.photos.bucket
 }
 
+import {
+  to = aws_ssm_parameter.photos_bucket_name
+  id = "/app/s3/photos_bucket_name"
+}
+
 resource "aws_ssm_parameter" "photos_table_name" {
   name  = "/app/dynamodb/photos_table_name"
   type  = "String"
   value = aws_dynamodb_table.photos.name
+}
+
+import {
+  to = aws_ssm_parameter.photos_table_name
+  id = "/app/dynamodb/photos_table_name"
 }

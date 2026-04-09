@@ -187,7 +187,7 @@ resource "aws_vpc_security_group_ingress_rule" "xpix_sg_http" {
 
 import {
   to = aws_vpc_security_group_ingress_rule.xpix_sg_http
-  id = "sgr-05ab7564a267ec60c"
+  id = "sgr-0efa8bab6e96061f9"
 }
 
 # --- App Server Security Group ---
@@ -216,5 +216,5 @@ resource "aws_vpc_security_group_ingress_rule" "app_server_ssh" {
 
 import {
   to = aws_vpc_security_group_ingress_rule.app_server_ssh
-  id = "sgr-00d2cd84521fdb970"
+  id = "sgr-0cb3495cf7fb7f7e2"
 }

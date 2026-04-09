@@ -33,7 +33,6 @@ deactivate # Exit the Python virtual environment
 # and we want to change the ownership of those files to be owned by the ec2-user account instead.
 chown -R ec2-user:ec2-user $APP_DIR
 
-
 # --- Create systemd service ---
 # This creates a systemd service that will run our Flask app using Gunicorn.
 # The service will run as the ec2-user, and it will start automatically on boot.
